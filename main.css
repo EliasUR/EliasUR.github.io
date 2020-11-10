@@ -9,9 +9,14 @@ body {
     background-size: cover;
     background-attachment: fixed;
     background-position-y: 70%;
+    background-color: black;
 }
 
 /* ...............HEADER .......................*/
+header{
+    width: 100%;
+    background-color: white;
+}
 header>a{
     font-size: 3rem;
     color: black;
@@ -27,7 +32,7 @@ header>h4{
     font-size: 2rem;
     font-weight: 300;
     font-style: italic;
-    text-indent: 30vw;
+    margin-left: 28%;
 }
 /* ...............HEADER .......................*/
 
