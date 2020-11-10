@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Elías Rodríguez</title>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="main.css">
+
+        <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    </head>
+    <body>
+        <nav id="nav" class="d-flex flex-wrap justify-content-between align-items-center">
+            <h2 class="">ElíasU.R.</h2>
+            <a id="up" href="#Home"><i class="far fa-arrow-alt-circle-up"></i></a>
+        </nav>
+        <div class="container-fluid" id="app">
+            <header id="Home" class="py-3">
+                <h1>Elías U. Rodríguez</h1>
+                <a id="down" href="#Contact"><i class="far fa-arrow-alt-circle-down"></i></a>
+                <h4><span id="typing"></span></h4>
+                <div id="texts">
+                    <i>Just a developer.</i>
+                    <i>Just a man.</i>
+                    <i>Just a human.</i>
+                    <!-- <i>Elias</i>
+                    <i>Elías Rodríguez</i> -->
+                </div>
+            </header>
+            <main id="Projects" class="d-flex flex-row flex-wrap justify-content-around align-items-center">
+                
+                <!-- proximo a agregar -->
+                <!-- <div id="tools" class="border border-dark rounded col-10 d-flex flex-row flex-wrap justify-content-around align-items-center">                    
+                    <a id="js" href="#"><i class="fab fa-js-square"></i></a>
+                    <a id="html" href="#"><i class="fab fa-html5"></i></a>
+                    <a id="react" href="#"><i class="fab fa-react"></i></a>
+                    <a id="vue" href="#"><i class="fab fa-vuejs"></i></a>
+                    <a id="sass" href="#"><i class="fab fa-sass"></i></a>
+                    <a id="css" href="#"><i class="fab fa-css3-alt"></i></a>
+                    <a id="bootstrap" href="#"><i class="fab fa-bootstrap"></i></a>
+                </div> -->
+
+                <div v-for="project in projects" class="project m-2 shadow d-flex flex-column align-items-center justify-content-around">
+                    <h3 class="mb-2">{{project.title}}</h3>
+                    <div class="content" width="90%">
+                        <img class="border border-dark rounded" width="100%" :src="project.img" :alt="'A ' + project.title + ' screenshot.'">
+                        <p class="description">{{project.description}}</p>
+                    </div>
+                    <div class="my-3">
+                        <template v-if="project.link != ''">
+                            <a target="blank" :href="project.link" class="btn btn-outline-success px-4">Demo</a>
+                        </template>
+                        <template v-if="project.repo != ''">
+                            <a target="blank" :href="project.repo" class="btn btn-outline-info px-4">Repo</a>
+                        </template>
+                    </div>
+                </div>
+            </main>
+            <footer id="Contact" class="d-flex justify-content-around row">
+                <h2 class="col-12 text-center">Contact Me</h2>
+                <a href="tel:+54 9 1152217050"><i class="fas fa-phone-square"></i></a>
+                <a target="blank" href="http://linkedin.com/in/elías-ur"><i class="fab fa-linkedin"></i></a>
+                <a target="blank" href="http://github.com/EliasUR"><i class="fab fa-github-square"></i></a>
+                <a href="mailto:eliasrodriguez2002@hotmail.com"><i class="fas fa-envelope-square"></i></a>
+            </footer>
+        </div>
+
+        <script src="https://kit.fontawesome.com/22bd47855f.js" crossorigin="anonymous"></script>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+        <script src="./main.js"></script>
+    </body>
+</html>
