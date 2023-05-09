@@ -16,12 +16,11 @@ var vue = new Vue({
     el:'#app',
     data: {
         projects: [
+            new Project('Pixa Game', 'img/pixa.png', 'Game made with my team from the START course.', 
+            'eliasur.github.io/The-Pixa-Game/', 'https://github.com/EliasUR/The-Pixa-Game'),
             new Project('Dino Canvas', './img/dino.png', 
             'A copy of trex-chrome and my first game using canvas.', 
             'https://eliasur.github.io/Dino-Canvas/', 'https://github.com/EliasUR/Dino-Canvas'),
-            new Project('NYSL WebApp', './img/nysl2.png', 
-            'A Single Page App made with a team for the third module of the "Start" course using React and FireBase.', 
-            'https://nysl-webapp-f42cb.firebaseapp.com/', ''), 
             new Project('TGIF', './img/tgif.png', 
             'Second module of the "Start" course. It was made by consuming a ProPublica API and using VueJs and Bootstrap.', 
             'https://eliasur.github.io/TGIF/', 'https://github.com/EliasUR/TGIF'),
