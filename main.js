@@ -17,7 +17,7 @@ var vue = new Vue({
     data: {
         projects: [
             new Project('Pixa Game', 'img/pixa.png', 'Game made with my team from the START course.', 
-            'eliasur.github.io/The-Pixa-Game/', 'https://github.com/EliasUR/The-Pixa-Game'),
+            'https://eliasur.github.io/The-Pixa-Game/', 'https://github.com/EliasUR/The-Pixa-Game'),
             new Project('Dino Canvas', './img/dino.png', 
             'A copy of trex-chrome and my first game using canvas.', 
             'https://eliasur.github.io/Dino-Canvas/', 'https://github.com/EliasUR/Dino-Canvas'),
